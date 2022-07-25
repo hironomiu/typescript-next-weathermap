@@ -1,4 +1,3 @@
-import { symlink } from 'fs'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Layout from '../components/Layout'
