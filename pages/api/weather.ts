@@ -7,7 +7,6 @@ const weather = async (req: NextApiRequest, res: NextApiResponse) => {
     `http://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${apiKey}&lang=ja&units=metric`
   )
   const json = await response.json()
-  console.log('json:', json)
   res.status(200).json(json)
 }
 
