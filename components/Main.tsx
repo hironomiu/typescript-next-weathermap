@@ -1,11 +1,7 @@
 import { useState } from 'react'
-import Image from 'next/image'
 
 const fetchData = async (text: string) => {
-  const apiKey = process.env.NEXT_PUBLIC_API_KEY
-  const response = await fetch(
-    `http://api.openweathermap.org/data/2.5/weather?q=${text}&appid=${apiKey}&lang=ja&units=metric`
-  )
+  const response = await fetch(`/api/weather/?text=${text}`)
   const json = await response.json()
   return json
 }
